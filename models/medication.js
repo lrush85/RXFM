@@ -1,13 +1,13 @@
 module.exports = function (sequelize, DataTypes) {
   var Medication = sequelize.define("Medication", {
-    Generic_Name: {
+    GenericName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    Brand_Name: {
+    BrandName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -28,7 +28,7 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    Side_Effects: {
+    SideEffects: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
@@ -42,7 +42,7 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    DC_Plan: {
+    DCPlan: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
@@ -55,7 +55,7 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    },
+    }
   });
   return Medication;
 };
