@@ -55,8 +55,14 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    },
+    }
   });
+  Medication.associate = function(models) {
+    Medication.belongsTo(models.Admin, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Medication;
 };
-
