@@ -24,8 +24,8 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/medRoutes")(app);
 require("./routes/adminRoute")(app);
+require("./routes/medRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = {
