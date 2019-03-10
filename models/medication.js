@@ -1,10 +1,10 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var Medication = sequelize.define("Medication", {
     Generic_Name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [2]
       }
     },
     Brand_Name: {
