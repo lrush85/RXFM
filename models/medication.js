@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [2]
       }
     },
     Brand_Name: {
@@ -57,7 +57,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  Medication.associate = function(models) {
+  Medication.associate = function (models) {
     Medication.belongsTo(models.Admin, {
       foreignKey: {
         allowNull: false
