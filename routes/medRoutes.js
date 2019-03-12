@@ -2,6 +2,16 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
+  app.get("/api/medication/:id", function(req, res) {
+    db.Medication.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbMeds) {
+      res.json(dbMeds);
+    });
+  });
+
   app.get("/api/medication", function(req, res) {
     db.Medication.findAll({}).then(function(dbMeds) {
       res.json(dbMeds);
@@ -21,4 +31,6 @@ module.exports = function(app) {
       res.json(dbMed);
     });
   });
+
+
 };
