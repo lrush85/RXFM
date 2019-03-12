@@ -1,3 +1,50 @@
-.list-group-item {
+/* .list-group-item {
   line-height: 2.5;
+} */
+
+#navBar {
+  height: 110px;
+  width: 100%;
+  background-color: red;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-color: darkgray;
+}
+
+#pill-logo {
+  font-size: 20px;
+  height: 32.5px;
+  width: 100px;
+  background-color: white;
+  margin: auto;
+  position: absolute;
+  margin-top: 20px;
+  left: 50%;
+  margin-left: -50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#finis-medicamen {
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  top: 65px;
+}
+
+.btn {
+  background-color: darkgray;
+}
+
+.container {
+  text-align: center;
+}
+
+#display-table {
+  height: 300px;
+  width: 100%;
+  background-color:darkgray;
 }

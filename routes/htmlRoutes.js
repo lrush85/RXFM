@@ -3,7 +3,13 @@ var passportRoutes = require("./passportRoutes");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+    db.Medication.findAll({}).then(function(dbMeds) {
+      res.render("index", {
+        medications: dbMeds
+      });
+    });
     res.render("index");
+
   });
 
   // Load example page and pass in an example by id
