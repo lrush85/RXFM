@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "process.env.DEFAULT_MYSQL_ADMIN_PASSWORD",
+    "password": "Superm4n1!",
     "database": "rxfm_db",
     "host": "localhost",
     "dialect": "mysql"
