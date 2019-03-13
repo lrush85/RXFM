@@ -9,7 +9,6 @@ module.exports = function(app) {
       });
     });
     res.render("index");
-
   });
 
   // Load example page and pass in an example by id
@@ -31,7 +30,9 @@ module.exports = function(app) {
   });
 
   //Passport Admin Route
-  app.get("/admin", passportRoutes.admin);
+  app.get("/admin", function(req, res) {
+    res.render("admin-database");
+  });
 
   app.post(
     "/admin",
