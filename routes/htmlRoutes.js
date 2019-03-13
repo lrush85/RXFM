@@ -1,5 +1,5 @@
 var db = require("../models");
-var passportRoutes = require("./passportRoutes");
+
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
