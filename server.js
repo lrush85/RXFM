@@ -5,17 +5,6 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Passport
-app.use(
-  session({
-    secret: "keyboard cat",
-    resave: true,
-    saveUninitialized: true
-  })
-); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-
 // Middleware
 app.use(
   express.urlencoded({
@@ -38,7 +27,7 @@ app.set("view engine", "handlebars");
 require("./routes/adminRoute")(app);
 require("./routes/medRoutes")(app);
 require("./routes/htmlRoutes")(app);
-require("./routes/passportRoutes")(app);
+
 
 var syncOptions = {
   force: false
