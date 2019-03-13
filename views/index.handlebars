@@ -1,22 +1,29 @@
 <div class="container">
   <div class="form-group">
     <br>
-    Search by drug name:
+    SEARCH BY DRUG NAME:
     <br><br>
     <input type="text" id="drug-search" class="form-control">
     <br>
-    <button id="submit" class="btn btn-primary">Submit</button>
+    <button id="submit" class="btn btn-primary">SUBMIT</button>
   </div>
-  {{!-- <ul id="example-list" class="list-group">
-      {{#each examples}}
-      <li data-id="{{this.id}}" class="list-group-item">
-        <a href="example/{{this.id}}">{{this.text}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-      </li>
-      {{/each}}
-    </ul> --}}
     <br><br>
-    <div id="display-table"></div>
+    <div id="display-table">
+      <div class="row">
+        <div id="generic-name" class="col-3">GENERIC NAME<div id="generic-name-content"></div></div>
+        <div id="brand-name"class="col-3">BRAND NAME<div id="brand-name-content"></div></div>
+        <div id="class" class="col-3">CLASS<div id="class-content"></div></div>
+        <div id="uses" class="col-3">USES<div id="uses-content"></div></div>
+      </div>
+    </div>
+    <div id="display-table-two">
+      <div class="row">
+        <div id="side-effects" class="col-3">SIDE EFFECTS<div id="side-effects-content"></div></div>
+        <div id="rationale" class="col-3">RATIONALE<div id="rationale-content"></div></div>
+        <div id="dc-plan" class="col-3">DISCONTINUE PLAN<div id="dc-plan-content"></div></div>
+        <div id="withdrawal" class="col-3">WITHDRAWAL<div id="withdrawal-content"></div></div>
+      </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
