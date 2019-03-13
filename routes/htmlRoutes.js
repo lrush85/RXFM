@@ -4,11 +4,8 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Medication.findAll({}).then(function(dbMeds) {
-      res.render("index", {
-        medications: dbMeds
-      });
+      res.render("index");
     });
-    res.render("index");
   });
 
   // Load example page and pass in an example by id
@@ -18,7 +15,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbMed) {
-      res.render("example", {
+      res.render("index", {
         medication: dbMed
       });
     });
@@ -29,18 +26,16 @@ module.exports = function(app) {
     res.render("404");
   });
 
-  //Passport Admin Route
+
   app.get("/admin", function(req, res) {
-    res.render("admin-database");
+    res.render("admin");
   });
 
 
 
   app.get("/admin/all", function(req, res) {
     db.Medication.findAll({}).then(function(dbMed) {
-      res.render("admin-database", {
-        medication: dbMed
-      });
+      res.render("admin-database");
     });
   });
 };
