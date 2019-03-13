@@ -34,13 +34,7 @@ module.exports = function(app) {
     res.render("admin-database");
   });
 
-  app.post(
-    "/admin",
-    passport.authenticate("local-signup", {
-      successRedirect: "/admin/all",
-      failureRedirect: "/admin"
-    })
-  );
+
 
   app.get("/admin/all", function(req, res) {
     db.Medication.findAll({}).then(function(dbMed) {
