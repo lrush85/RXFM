@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Platypus0927??",
+    "password": "Pharmacy1",
     "database": "rxfm_db",
     "host": "localhost",
     "dialect": "mysql"

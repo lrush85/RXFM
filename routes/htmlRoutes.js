@@ -1,40 +1,32 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Medication.findAll({}).then(function(dbMeds) {
-      res.render("index", {
-        medications: dbMeds
-      });
-    });
+   app.get("/", function(req, res, next) {
     res.render("index");
   });
 
+
+
   // Load example page and pass in an example by id
-  app.get("/medication/:id", function(req, res) {
-    db.Medication.findOne({
+  app.get("/medication/:medicationName", function(req, res) {
+    db.Medication.findAll({
       where: {
-        id: req.params.id
+        Generic_Name: req.params.medicationName
       }
     }).then(function(dbMed) {
-      res.render("example", {
+      res.json({
         medication: dbMed
       });
     });
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+
+
 
   //Passport Admin Route
   app.get("/admin", function(req, res) {
-    res.render("admin-database");
+    res.render("admin");
   });
-
-
 
   app.get("/admin/all", function(req, res) {
     db.Medication.findAll({}).then(function(dbMed) {
@@ -43,4 +35,9 @@ module.exports = function(app) {
       });
     });
   });
+
+  // Render 404 page for any unmatched routes
+  // app.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 };
