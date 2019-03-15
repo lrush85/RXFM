@@ -20,17 +20,30 @@ module.exports = function(app) {
 
   // Create a new example
   app.post("/api/medication", function(req, res) {
-    db.Medication.create(req.body).then(function(dbMed) {
-      res.json(dbMed);
-    });
+    db.Medication.create({
+      Generic_Name: req.body.generic_name,
+      Brand_Name: req.body.brand_name,
+      Class: req.body.class,
+      Uses: req.body.uses,
+      Side_Effects: req.body.side_effects,
+      Rationale: req.body.rationale,
+      DC_Plan: req.body.dc_plan,
+      Withdrawal: req.body.withdrawal
+    })
+      .then(function(dbMed) {
+        res.json(dbMed);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
   });
 
   // Delete an example by id
   app.put("/api/medication/:id", function(req, res) {
-    db.Medication.update({ where: { id: req.params.id } }).then(function(dbMed) {
+    db.Medication.update({ where: { id: req.params.id } }).then(function(
+      dbMed
+    ) {
       res.json(dbMed);
     });
   });
-
-
 };
