@@ -6,16 +6,101 @@
           <h5 class="card-title">Admin Database</h5>
           <p>
 
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
+            <div class="container" <input type="submit" name="submit" value="Logout" />
+        </div>
 
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+        <form>
+          Generic Name:<br>
+          <input type="text" name="generic-name" value="">
+          <br>
+          Brand Name:<br>
+          <input type="text" name="brand-name" value="">
+          <br>
+          Class:<br>
+          <input type="text" name="class" value="">
+          <br>
+          Uses:<br>
+          <input type="text" name="uses" value="">
+          <br>
+          Side Effects:<br>
+          <input type="text" name="side-effects" value="">
+          <br>
+          Rationale:<br>
+          <input type="text" name="rationale" value="">
+          <br>
+          DC Plan:<br>
+          <input type="text" name="dc-plan" value="">
+          <br>
+          Withdrawal:<br>
+          <input type="text" name="withdrawal" value="">
+          <br>
+          <br>
+          <input type="submit" value="Submit" value="">
+        </form>
+        </p>
 
-              <button type="submit">Login</button>
-            </div>
+        {{!-- <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h2>!</h2>
+                <ul>
+                  {{#each db.Admin}}
+                  {{#unless }}
+                  {{>burgers/burger-block devoured=true}}
+                  {{/unless}}
+                  {{/each}}
+                </ul>
+              </div>
 
+<<<<<<< HEAD
+              <div class="col-md-4">
+                <h2>!</h2>
+                <ul>
+                  {{#each db.Admin}}
+                  {{#if devoured}}
+                  {{>burgers/burger-block devoured=false}}
+                  {{/if}}
+                  {{/each}}
+                </ul>
+              </div> --}}
+
+        <strong>Description:</strong> {{index.description}}</p>
+        <a href="/">← Back To Home</a>
+||||||| merged common ancestors
+            <form>
+              Generic Name:<br>
+              <input type="text" name="generic-name">
+              <br>
+              Brand Name:<br>
+              <input type="text" name="brand-name">
+              <br>
+              Class:<br>
+              <input type="text" name="class">
+              <br>
+              Uses:<br>
+              <input type="text" name="uses">
+              <br>
+              Side Effects:<br>
+              <input type="text" name="side-effects">
+              <br>
+              Rationale:<br>
+              <input type="text" name="rationale">
+              <br>
+              DC Plan:<br>
+              <input type="text" name="dc-plan">
+              <br>
+              Withdrawal:<br>
+              <input type="text" name="withdrawal">
+              <br>
+              <br>
+              <input type="submit" value="Submit">
+            </form>
+          </p>
+
+          <strong>Description:</strong> {{index.description}}</p>
+          <a href="/">← Back To Home</a>
+        </div>
+=======
             <form>
               Generic Name:<br>
               <input type="text" name="generic-name">
@@ -46,7 +131,12 @@
             </form>
           </p>
         </div>
+>>>>>>> cf672eaedcaaa27e4a2bf40952dec22f3ddd9614
       </div>
     </div>
   </div>
 </div>
+</div>
+
+<script src="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/admin.js"></script>
