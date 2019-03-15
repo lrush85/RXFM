@@ -23,16 +23,14 @@ module.exports = function(app) {
 
 
 
-  //Passport Admin Route
+
   app.get("/admin", function(req, res) {
     res.render("admin");
   });
 
   app.get("/admin/all", function(req, res) {
     db.Medication.findAll({}).then(function(dbMed) {
-      res.render("admin-database", {
-        medication: dbMed
-      });
+      res.render("admin-database");
     });
   });
 
