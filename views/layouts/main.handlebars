@@ -9,15 +9,24 @@
 </head>
 
 <body>
-  <div id="navBar"><div class="container"><div id="pill-logo">RX | FM</div><div id="finis-medicamen">FINIS MEDICAMEN</div><div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  </a>
+  <div id="navBar">
+  <div class="container">
+    <div id="pill-logo">RX | FM</div>
+      <div id="finis-medicamen">FINIS MEDICAMEN</div>
+        <div class="dropdown">
+          
+          {{#if loggedIn}}
+          <a href="/logout">
+          <button id="logged-out" class="btn btn-secondary">Logout</button>
+          </a>
+          {{else}}
+          <a href="/login">
+          <button class="btn btn-secondary">Admin Login</button>
+          </a>
+          {{/if}}
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
+          
+        
 </div></div></div>
   {{{body}}}
 </body>
