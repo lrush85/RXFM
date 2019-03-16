@@ -37,21 +37,35 @@ module.exports = function(app) {
       });
   });
 
-  app.put("/api/medication/:id", function(req, res) {
-    db.Medication.update({ where: { id: req.params.id } }).then(function(
-      dbMed
-    ) {
+  app.put("/api/medication/", function(req, res) {
+    db.Medication.update(
+      {
+        Generic_Name: req.body.Generic_Name,
+        Brand_Name: req.body.Brand_Name,
+        Class: req.body.Class,
+        Uses: req.body.Uses,
+        Side_Effects: req.body.Side_Effects,
+        Rationale: req.body.Rationale,
+        DC_Plan: req.body.DC_Plan,
+        Withdrawal: req.body.Withdrawal
+      },
+      {
+        where: {
+          id: req.body.id
+        }
+      }
+    ).then(function(dbMed) {
       res.json(dbMed);
     });
   });
 
   app.delete("/api/medication/:id", function(req, res) {
-    db.Todo.destroy({
+    db.Medication.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbTodo) {
-      res.json(dbTodo);
+    }).then(function(dbMed) {
+      res.json(dbMed);
     });
   });
 };
