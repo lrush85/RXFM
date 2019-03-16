@@ -8,14 +8,14 @@ $(function () {
             event.preventDefault();
 
             var newMedication = {
-                genericName: $("#generic-name").val().trim(),
-                brandName: $("#brand-name").val().trim(),
-                class: $("#class").val().trim(),
-                uses: $("#uses").val().trim(),
-                sideEffects: $("#side-effects").val().trim(),
-                rational: $("#rational").val().trim(),
-                dcPlan: $("#dc-plan").val().trim(),
-                widthdrawl: $("#widthdrawl").val().trim()
+                Generic_Name: $("#generic-name").val().trim(),
+                Brand_Name: $("#brand-name").val().trim(),
+                Class: $("#class").val().trim(),
+                Uses: $("#uses").val().trim(),
+                Side_Effects: $("#side-effects").val().trim(),
+                Rationale: $("#rational").val().trim(),
+                DC_Plan: $("#dc-plan").val().trim(),
+                Widthdrawl: $("#widthdrawl").val().trim(),
             };
 
             // Send the POST request.
