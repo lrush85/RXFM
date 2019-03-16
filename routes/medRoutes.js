@@ -20,7 +20,7 @@ module.exports = function(app) {
 
   // Create a new example
   app.post("/api/medication", function(req, res) {
-    db.Medication.create({
+      db.Medication.create({
       Generic_Name: req.body.generic_name,
       Brand_Name: req.body.brand_name,
       Class: req.body.class,
@@ -38,12 +38,22 @@ module.exports = function(app) {
       });
   });
 
-  // Delete an example by id
+  
   app.put("/api/medication/:id", function(req, res) {
     db.Medication.update({ where: { id: req.params.id } }).then(function(
       dbMed
     ) {
       res.json(dbMed);
+    });
+  });
+
+  app.delete("/api/medication/:id", function(req, res) {
+    db.Todo.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbTodo) {
+      res.json(dbTodo);
     });
   });
 };
