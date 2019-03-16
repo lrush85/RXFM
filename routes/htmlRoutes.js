@@ -1,6 +1,9 @@
 var db = require("../models");
+var Op = require("sequelize").Op;
 
 module.exports = function(app) {
+  
+
    app.get("/", function(req, res, next) {
     res.render("index");
   });
@@ -9,10 +12,12 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by id
   app.get("/medication/:medicationName", function(req, res) {
+    var medName = req.params.medicationName
+    console.log(medName)
+
     db.Medication.findAll({
-      where: {
-        Generic_Name: req.params.medicationName
-      }
+      where: {[Op.or]: [{Generic_Name: medName},{Brand_Name: medName}]
+        }
     }).then(function(dbMed) {
       res.json({
         medication: dbMed
