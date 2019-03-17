@@ -1,89 +1,124 @@
 <div class="container">
 
-<br><br>
-<button type="button" id="add-button" class="btn btn-primary">Add Medication</button>
-<br>
-<div id="add-medication">
-  <form>
-    Generic Name:<br>
-    <input type="text" id="generic-name" value="">
-    <br>
-    Brand Name:<br>
-    <input type="text" id="brand-name" value="">
-    <br>
-    Class:<br>
-    <input type="text" id="class" value="">
-    <br>
-    Uses:<br>
-    <input type="text" id="uses" value="">
-    <br>
-    Side Effects:<br>
-    <input type="text" id="side-effects" value="">
-    <br>
-    Rationale:<br>
-    <input type="text" id="rationale" value="">
-    <br>
-    DC Plan:<br>
-    <input type="text" id="dc-plan" value="">
-    <br>
-    Withdrawal:<br>
-    <input type="text" id="withdrawal" value="">
-    <br>
-    <br>
-    <input type="submit" id="add-submit" value="Submit" value="">
-  </form>
-</div>
-<br>
-
-<button type="button" id="delete-button" class="btn btn-primary">Delete Medication</button>
-<br>
-<div id="delete-medication">
-  <div class="container">
-    <div class="form-group">
+  <br><br>
+  <button type="button" id="add-button" class="btn btn-primary">Add Medication</button>
+  <br>
+  <div id="add-medication">
+    <form>
       <br>
-      SEARCH BY DRUG NAME:
-      <br><br>
-      <input type="text" id="drug-search" class="form-control">
+      Generic Name:<br>
+      <input type="text" id="generic-name" value="" class="form-control">
       <br>
-      <button id="submit" class="btn btn-primary">SUBMIT</button>
-    </div>
-    <br><br>
-    <div id="display-table">
-      <div class="row">
-        <div id="generic-name" class="col-3">GENERIC NAME<div id="generic-name-content"></div>
-        </div>
-        <div id="brand-name" class="col-3">BRAND NAME<div id="brand-name-content"></div>
-        </div>
-        <div id="class" class="col-3">CLASS<div id="class-content"></div>
-        </div>
-        <div id="uses" class="col-3">USES<div id="uses-content"></div>
-        </div>
-      </div>
-    </div>
-    <div id="display-table-two">
-      <div class="row">
-        <div id="side-effects" class="col-3">SIDE EFFECTS<div id="side-effects-content"></div>
-        </div>
-        <div id="rationale" class="col-3">RATIONALE<div id="rationale-content"></div>
-        </div>
-        <div id="dc-plan" class="col-3">DISCONTINUE PLAN<div id="dc-plan-content"></div>
-        </div>
-        <div id="withdrawal" class="col-3">WITHDRAWAL<div id="withdrawal-content"></div>
-        </div>
-      </div>
-    </div>
+      Brand Name:<br>
+      <input type="text" id="brand-name" value="" class="form-control">
+      <br>
+      Class:<br>
+      <input type="text" id="class" value="" class="form-control">
+      <br>
+      Uses:<br>
+      <input type="text" id="uses" value="" class="form-control">
+      <br>
+      Side Effects:<br>
+      <input type="text" id="side-effects" value="" class="form-control">
+      <br>
+      Rationale:<br>
+      <input type="text" id="rationale" value="" class="form-control">
+      <br>
+      DC Plan:<br>
+      <input type="text" id="dc-plan" value="" class="form-control">
+      <br>
+      Withdrawal:<br>
+      <input type="text" id="withdrawal" value="" class="form-control">
+      <br>
+      <input type="submit" id="add-medication-submit" value="ADD" value="">
+    </form>
   </div>
-</div>
-<br>
+  <br>
 
-<button type="button" class="btn btn-primary">Update Medication</button>
-<br>
-<div id="update-medication">
-  <div id="update-search-div">
+  <button type="button" id="delete-button" class="btn btn-primary">Delete Medication</button>
+  <br>
+  <div id="delete-medication">
+    <div class="container">
+      <div class="form-group">
+        <br>
+        SEARCH BY DRUG NAME:
+        <br><br>
+        <input type="text" id="drug-delete-search" class="form-control">
+        <br>
+        <input type="submit" id="delete-search-submit" value="SEARCH" value="">
+      </div>
+      <br>
+      <div id="display-table">
+        <div class="row">
+          <div id="generic-name" class="col-3">GENERIC NAME<div id="generic-name-content"></div>
+          </div>
+          <div id="brand-name" class="col-3">BRAND NAME<div id="brand-name-content"></div>
+          </div>
+          <div id="class" class="col-3">CLASS<div id="class-content"></div>
+          </div>
+          <div id="uses" class="col-3">USES<div id="uses-content"></div>
+          </div>
+        </div>
+      </div>
+      <div id="display-table-two">
+        <div class="row">
+          <div id="side-effects" class="col-3">SIDE EFFECTS<div id="side-effects-content"></div>
+          </div>
+          <div id="rationale" class="col-3">RATIONALE<div id="rationale-content"></div>
+          </div>
+          <div id="dc-plan" class="col-3">DISCONTINUE PLAN<div id="dc-plan-content"></div>
+          </div>
+          <div id="withdrawal" class="col-3">WITHDRAWAL<div id="withdrawal-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <input type="submit" id="update-medication-submit" value="DELETE" value="">
+  </div>
+  <br>
+
+  <button type="button" id="update-button" class="btn btn-primary">Update Medication</button>
+  <br>
+
+  <div id="update-medication">
+    <br>
     SEARCH BY DRUG NAME:
     <br><br>
-    <input type="text" id="drug-search" class="form-control">
+    <input type="text" id="drug-update-search" class="form-control">
     <br>
-    <button id="update-search-submit" class="btn btn-primary">SUBMIT</button>
+    <input type="submit" id="update-search-submit" value="SEARCH" value="">
+
+    <form>
+      <br>
+      Generic Name:<br>
+      <input type="text" id="generic-name" value="" class="form-control">
+      <br>
+      Brand Name:<br>
+      <input type="text" id="brand-name" value="" class="form-control">
+      <br>
+      Class:<br>
+      <input type="text" id="class" value="" class="form-control">
+      <br>
+      Uses:<br>
+      <input type="text" id="uses" value="" class="form-control">
+      <br>
+      Side Effects:<br>
+      <input type="text" id="side-effects" value="" class="form-control">
+      <br>
+      Rationale:<br>
+      <input type="text" id="rationale" value="" class="form-control">
+      <br>
+      DC Plan:<br>
+      <input type="text" id="dc-plan" value="" class="form-control">
+      <br>
+      Withdrawal:<br>
+      <input type="text" id="withdrawal" value="" class="form-control">
+      <br>
+      <input type="submit" id="delete-medication-submit" value="UPDATE" value="">
+    </form>
+    <br><br>
   </div>
-</div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/admin.js"></script> 
