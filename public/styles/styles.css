@@ -181,3 +181,7 @@
   border-top-width: 2px;
   border-top-color: white;
 }
+
+h2 {
+  text-align: right;
+}
