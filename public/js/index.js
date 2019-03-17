@@ -1,5 +1,3 @@
-// var userSearch = "";
-
 $("#submit").on("click", function(event) {
   event.preventDefault();
 
