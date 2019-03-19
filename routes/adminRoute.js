@@ -6,7 +6,7 @@ var myVars = {
   clientID: "Rq88rtx1gWAKHk2VGIJIWPMcUrM7l0Nb",
   clientSecret:
     "MgxkylB9pvWFTblODFWz0NMmxVXiTzXXvSJPoiymOECvGf-PAtole_9KVt9WtyLT",
-  callbackURL: "http://localhost:3000/callback"
+  callbackURL: "https://ancient-dawn-39175.herokuapp.com/callback"
 };
 
 module.exports = function(app) {
