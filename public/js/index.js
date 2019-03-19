@@ -19,3 +19,16 @@ $("#submit").on("click", function(event) {
     $("#withdrawal-content").text(data.medication[0].Withdrawal);
   });
 });
+
+var medsArray = [];
+$.get("/api/medication", function(data) {
+  console.log(data[0]);
+  medsArray.push(data[0].Generic_Name);
+  medsArray.push(data[0].Brand_Name);
+  console.log(medsArray);
+  $(function() {
+    $("#drug-search").autocomplete({
+      source: medsArray
+    });
+  });
+});
