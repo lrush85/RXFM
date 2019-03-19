@@ -199,3 +199,27 @@ strong {
   background-color: #f2f2f2;
   height: 100%;
 }
+
+.ui-menu-item-wrapper ui, li {
+  list-style-type: none;
+  text-align: justify;
+  background-color: #f2f2f2;
+  color: #333;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+   border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.ui-menu-item-wrapper ui:hover, li:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}

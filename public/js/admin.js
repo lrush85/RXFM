@@ -12,14 +12,30 @@ $("#add-medication-submit").on("click", function(event) {
   event.preventDefault();
 
   var Medication = {
-    Generic_Name: $("#Generic_Name").val().trim(),
-    Brand_Name: $("#Brand_Name").val().trim(),
-    Class: $("#Class").val().trim(),
-    Uses: $("#Uses").val().trim(),
-    Side_Effects: $("#Side-Effects").val().trim(),
-    Rationale: $("#Rationale").val().trim(),
-    DC_Plan: $("#DC_Plan").val().trim(),
-    Withdrawal: $("#Withdrawal").val().trim()
+    Generic_Name: $("#Generic_Name")
+      .val()
+      .trim(),
+    Brand_Name: $("#Brand_Name")
+      .val()
+      .trim(),
+    Class: $("#Class")
+      .val()
+      .trim(),
+    Uses: $("#Uses")
+      .val()
+      .trim(),
+    Side_Effects: $("#Side-Effects")
+      .val()
+      .trim(),
+    Rationale: $("#Rationale")
+      .val()
+      .trim(),
+    DC_Plan: $("#DC_Plan")
+      .val()
+      .trim(),
+    Withdrawal: $("#Withdrawal")
+      .val()
+      .trim()
   };
 
   $.post("/api/medication", Medication);
@@ -28,8 +44,8 @@ $("#add-medication-submit").on("click", function(event) {
   $("#Brand_Name").val(""),
   $("#Class").val(""),
   $("#Uses").val(""),
-    $("#Side-Effects").val(""),
-    $("#Rationale").val(""),
+  $("#Side-Effects").val(""),
+  $("#Rationale").val(""),
   $("#DC_Plan").val(""),
   $("#Withdrawal").val("");
 });
@@ -45,7 +61,7 @@ $("#delete-search-submit").on("click", function() {
     .val()
     .trim();
 
-  $.get("/medication/" + userSearch, function (data) {
+  $.get("/medication/" + userSearch, function(data) {
     searchID = data.medication[0].id;
 
     console.log(userSearch);
@@ -62,11 +78,11 @@ $("#delete-search-submit").on("click", function() {
     $("#withdrawal-content").text(data.medication[0].Withdrawal);
   });
 
-  $("#delete-medication-submit").on("click", function () {
+  $("#delete-medication-submit").on("click", function() {
     $.ajax({
       url: "/api/medication/" + searchID,
       method: "DELETE"
-    }).then(function () {
+    }).then(function() {
       console.log("medication deleted");
 
       $("#generic-name-content").text("");
@@ -86,12 +102,12 @@ var idToUpdate;
 $("#update-button").on("click", function() {
   $("#update-medication").show();
 
-  $("#update-search-submit").on("click", function () {
+  $("#update-search-submit").on("click", function() {
     userSearch = $("#drug-update-search")
       .val()
       .trim();
 
-    $.get("/medication/" + userSearch, function (data) {
+    $.get("/medication/" + userSearch, function(data) {
       console.log(userSearch);
       console.log(data.medication[0]);
       console.log(data.medication[0].Generic_Name);
@@ -106,41 +122,73 @@ $("#update-button").on("click", function() {
       $("#dc_plan-update").val(data.medication[0].DC_Plan);
       $("#withdrawal-update").val(data.medication[0].Withdrawal);
     });
-
-   });
+  });
 });
 
-
-
 $("#update-medication-submit").on("click", function(event) {
-   event.preventDefault();
- 
-   var Medication = {
+  event.preventDefault();
+
+  var Medication = {
     id: idToUpdate,
-     Generic_Name: $("#generic_name-update").val().trim(),
-     Brand_Name: $("#brand_name-update").val().trim(),
-     Class: $("#class-update").val().trim(),
-     Uses: $("#uses-update").val().trim(),
-     Side_Effects: $("#side_effects-update").val().trim(),
-     Rationale: $("#rationale-update").val().trim(),
-     DC_Plan: $("#dc_plan-update").val().trim(),
-     Withdrawal: $("#withdrawal-update").val().trim()
-   };
- 
-   $.ajax({
-      url: "/api/medication" ,
-      method: "PUT",
-      data: Medication
-   }).then(function(){
-      console.log("This worked")
-      $("#Generic_Name").val(""),
-      $("#Brand_Name").val(""),
-      $("#Class").val(""),
-      $("#Uses").val(""),
-        $("#Side-Effects").val(""),
-        $("#Rationale").val(""),
-      $("#DC_Plan").val(""),
-      $("#Withdrawal").val("");
-      window.location.href = "/admin"
-   });
+    Generic_Name: $("#generic_name-update")
+      .val()
+      .trim(),
+    Brand_Name: $("#brand_name-update")
+      .val()
+      .trim(),
+    Class: $("#class-update")
+      .val()
+      .trim(),
+    Uses: $("#uses-update")
+      .val()
+      .trim(),
+    Side_Effects: $("#side_effects-update")
+      .val()
+      .trim(),
+    Rationale: $("#rationale-update")
+      .val()
+      .trim(),
+    DC_Plan: $("#dc_plan-update")
+      .val()
+      .trim(),
+    Withdrawal: $("#withdrawal-update")
+      .val()
+      .trim()
+  };
+
+  $.ajax({
+    url: "/api/medication",
+    method: "PUT",
+    data: Medication
+  }).then(function() {
+    console.log("This worked");
+    $("#Generic_Name").val(""),
+    $("#Brand_Name").val(""),
+    $("#Class").val(""),
+    $("#Uses").val(""),
+    $("#Side-Effects").val(""),
+    $("#Rationale").val(""),
+    $("#DC_Plan").val(""),
+    $("#Withdrawal").val("");
+    window.location.href = "/admin";
+  });
+});
+
+var medsArray = [];
+$.get("/api/medication", function(data) {
+  console.log(data[0]);
+  medsArray.push(data[0].Generic_Name);
+  medsArray.push(data[0].Brand_Name);
+  console.log(medsArray);
+  $(function() {
+    $("#drug-update-search").autocomplete({
+      source: medsArray
+    });
+
+    $(function() {
+      $("#drug-delete-search").autocomplete({
+        source: medsArray
+      });
+    });
+  });
 });
