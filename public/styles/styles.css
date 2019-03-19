@@ -2,6 +2,10 @@
   line-height: 2.5;
 } */
 
+strong {
+  color: white;
+}
+
 #navBar {
   height: 110px;
   width: 100%;
@@ -69,6 +73,8 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #brand-name {
@@ -86,6 +92,8 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #class {
@@ -103,14 +111,14 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #uses {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: white;
-  margin: 0px;
-  padding: 0px;
   margin-left: 0px;
   padding-left: 0px;
 }
@@ -119,10 +127,12 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #display-table-two {
-  margin-top: 10px;
+  margin-top: 40px;
   height: fit-content;
   width: 100%;
   background-color:darkgray;
@@ -141,6 +151,8 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #rationale {
@@ -155,6 +167,8 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #dc-plan {
@@ -169,6 +183,8 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
 
 #withdrawal {
@@ -180,4 +196,6 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: white;
+  background-color: #f2f2f2;
+  height: 100%;
 }
