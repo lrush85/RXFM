@@ -13,7 +13,8 @@ module.exports = {
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
-    "use_env_variable" : "JAWSDB_URL",
+    // eslint-disable-next-line camelcase
+    use_env_variable: "JAWSDB_URL",
     dialect: "mysql"
   }
 };
