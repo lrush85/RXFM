@@ -1,7 +1,9 @@
 $("#submit").on("click", function(event) {
   event.preventDefault();
 
-  var userSearch = $("#drug-search").val().trim();
+  var userSearch = $("#drug-search")
+    .val()
+    .trim();
 
   console.log(userSearch);
 
@@ -22,10 +24,12 @@ $("#submit").on("click", function(event) {
 
 var medsArray = [];
 $.get("/api/medication", function(data) {
-  console.log(data[0]);
-  medsArray.push(data[0].Generic_Name);
-  medsArray.push(data[0].Brand_Name);
-  console.log(medsArray);
+  // console.log(data[0]);
+  for (var i = 0; i < data.length; i++) {
+    medsArray.push(data[i].Generic_Name);
+    medsArray.push(data[i].Brand_Name);
+  }
+  // console.log(medsArray);
   $(function() {
     $("#drug-search").autocomplete({
       source: medsArray
