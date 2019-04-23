@@ -1,4 +1,7 @@
 <div class="container">
+  <div id="bg">
+    <img src="./images/hands.jpeg" alt="medicaiton background">
+  </div>
   <div class="form-group">
     <br>
     <br>
@@ -7,15 +10,16 @@
     <button id="submit" class="btn btn-primary">SUBMIT</button>
   </div>
     <br><br>
-    <div id="display-table">
+    <div id="display-table" class="hidden">
+      
       <div class="row">
         <div id="generic-name" class="col-3"><strong>GENERIC NAME</strong><div id="generic-name-content"></div></div>
-        <div id="brand-name"class="col-3"><strong> NAME </strong><div id="brand-name-content"></div></div>
+        <div id="brand-name"class="col-3"><strong> BRAND NAME </strong><div id="brand-name-content"></div></div>
         <div id="class" class="col-3"><strong>CLASS</strong><div id="class-content"></div></div>
         <div id="uses" class="col-3"><strong>USES</strong><div id="uses-content"></div></div>
       </div>
     </div>
-    <div id="display-table-two">
+    <div id="display-table-two" class="hidden">
       <div class="row">
         <div id="side-effects" class="col-3"><strong> SIDE EFFECTS </strong><div id="side-effects-content"></div></div>
         <div id="rationale" class="col-3"> <strong>RATIONALE </strong><div id="rationale-content"></div></div>
@@ -23,6 +27,7 @@
         <div id="withdrawal" class="col-3"><strong>WITHDRAWAL</strong><div id="withdrawal-content"></div></div>
       </div>
     </div>
+    
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -9,7 +9,7 @@ strong {
 #navBar {
   height: 110px;
   width: 100%;
-  background-color: red;
+  background-color: dodgerblue;
   text-align: center;
   border-bottom-style: solid;
   border-bottom-width: 10px;
@@ -44,13 +44,45 @@ strong {
   top: 65px;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+
 .btn {
   background-color: darkgray;
 }
 
 .container {
   text-align: center;
+
 }
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -1;
+}
+
 
 #display-table {
   height: fit-content;
@@ -61,37 +93,37 @@ strong {
 #generic-name {
   border-right-style: solid;
   border-right-width: 2px;
-  border-right-color: white;
-  border-bottom-style: solid;
+  border-right-color: black;
+  /* border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: white;
+  border-bottom-color: white; */
   margin-right: 0px;
   padding-right: 0px;
 }
 
 #generic-name-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
-  background-color: #f2f2f2;
+  border-top-color: white; */
+  background-color: #f2f2f2; 
   height: 100%;
 }
 
 #brand-name {
   border-right-style: solid;
   border-right-width: 2px;
-  border-right-color: white;
-  border-bottom-style: solid;
+  border-right-color: BLACK;
+  /* border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: white;
+  border-bottom-color: white; */
   margin: 0px;
   padding: 0px;
 }
 
 #brand-name-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
@@ -99,34 +131,34 @@ strong {
 #class {
   border-right-style: solid;
   border-right-width: 2px;
-  border-right-color: white;
-  border-bottom-style: solid;
+  border-right-color: BLACK;
+  /* border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: white;
+  border-bottom-color: white;  */
   margin: 0px;
   padding: 0px;
 }
 
 #class-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
 
 #uses {
-  border-bottom-style: solid;
+  /* border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: white;
+  border-bottom-color: white; */
   margin-left: 0px;
   padding-left: 0px;
 }
 
 #uses-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
@@ -141,16 +173,16 @@ strong {
 #side-effects {
   border-right-style: solid;
   border-right-width: 2px;
-  border-right-color: white;
+  border-right-color: black;
   margin-right: 0px;
   padding-right: 0px;
 }
 
 
 #side-effects-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
@@ -158,15 +190,15 @@ strong {
 #rationale {
   border-right-style: solid;
   border-right-width: 2px;
-  border-right-color: white;
+  border-right-color: black;
   margin: 0px;
   padding: 0px;
 }
 
 #rationale-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
@@ -174,15 +206,15 @@ strong {
 #dc-plan {
   border-right-style: solid;
   border-right-width: 2px;
-  border-right-color: white;
+  border-right-color: black;
   margin: 0px;
   padding: 0px;
 }
 
 #dc-plan-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
@@ -193,9 +225,9 @@ strong {
 }
 
 #withdrawal-content {
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: white;
+  border-top-color: white; */
   background-color: #f2f2f2;
   height: 100%;
 }
